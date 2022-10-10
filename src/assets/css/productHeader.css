@@ -1,0 +1,10 @@
+.productHeader h3::after {
+   content: "";
+   background: #08c;
+   @apply absolute h-0.5 w-[100px] left-0 bottom-[-1px];
+}
+
+.productHeader h3 {
+   border-bottom: 1px solid #e5e5e5;
+   @apply relative pb-3.5 m-[0_0_15px_0] text-[#222] font-bold text-xl leading-4;
+}

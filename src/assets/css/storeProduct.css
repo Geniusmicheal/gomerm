@@ -1,0 +1,27 @@
+
+.table-responsive{
+   border:1px solid #dee2e6;
+   border-radius: .3rem;
+   margin-bottom: 1rem;
+}
+
+.table-responsive .overflow-x-auto{
+   height: 35px;
+   transition: height .6s ease-in-out;
+}
+
+.table-responsive button.form-control{
+   margin: 5px;
+   border-radius: 20px;
+   padding: 2px 8px;
+}
+.table-responsive .card-header{
+   @apply py-1;
+}
+
+button.form-control:is([type='submit'], [type='button']){
+   background-color: #3e8ed0;
+   @apply text-white cursor-pointer w-max !border-transparent;
+}
+button svg.spinner{ @apply h-5 w-5 }
+button.form-control:is([type='submit'], [type='button']):hover { background-color: #3488ce; }

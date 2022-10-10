@@ -1,0 +1,26 @@
+aside{
+   background: #050715;
+   height: calc(100vh - 54px);
+   transition: all .6s ease-in-out;
+   @apply overflow-x-hidden fixed md:sticky top-[54px] w-full md:!max-w-[224px] lg:!max-w-[260px] max-w-0 z-10;
+}
+
+
+aside ul li a{
+   line-height: 18px;
+   padding: 15px 20px;
+   @apply m-auto cursor-pointer w-full flex gap-x-2.5 text-base text-slate-500;
+}
+
+aside ul li a.active{
+   @apply text-white;
+   background: rgba(20, 36, 55, 0.9);
+   border-left: 3px solid #3e8ed0;
+} 
+
+aside ul li a:hover {
+   @apply px-2.5;
+   transition: all .2s ease-in-out;
+}
+
+aside ul li svg{ @apply my-auto h-4 fill-[#3e8ed0]; }

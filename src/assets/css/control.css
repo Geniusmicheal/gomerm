@@ -1,0 +1,40 @@
+ .control{
+   background: #050715;
+   @apply h-screen w-full flex justify-center items-center;
+}
+.control .card{
+   @apply w-full;
+   max-width: 540px;
+   border: 1px solid #6b7280;
+   background-color: inherit;
+}
+
+.control .card form{
+   min-height: 230px;
+   padding: 4rem 1.25rem 1.25rem;
+   @apply rounded-md w-full h-auto;
+   background: rgba(20, 36, 55, 0.9);
+}
+
+.control .card img{
+   width:90px;
+   padding: 12px 0px;
+   border-radius: 40px;
+   margin: 0px auto -50px;
+   background: rgba(20, 36, 55, 0.9);
+}
+
+.control form .alert { margin-top: -.8rem; }
+
+.control input{
+   color: #6b7280 !important;
+   background-color: transparent !important;
+   border: 1px solid #6b7280 !important;
+}
+
+.control button[type='submit']{
+   background-color: #3e8ed0;
+   @apply text-white cursor-pointer w-max !border-transparent;
+}
+.control button svg.spinner{ @apply h-5 w-5 }
+.control button[type='submit']:hover { background-color: #3488ce; }

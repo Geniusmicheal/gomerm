@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-group{ 
+   @apply flex gap-[1rem_0.625rem] flex-wrap md:flex-nowrap mb-4;
+}
+
+.form-control{
+   border: 1px solid #ced4da !important;
+   @apply form-input px-3 py-1 rounded w-full;
+}
+
+.form-control:focus {
+   outline: 0;
+   color: #495057;
+   box-shadow: none !important;
+   border-color: #80bdff !important;
+   @apply bg-white;
+}
+
+.form-control.form-control-sm{
+   padding: .25rem .5rem;
+   font-size: .775rem;
+   line-height: 1.5;
+}
+.close:hover{ background-color: rgba(10,10,10,.3); }
+
+.close{
+   font-size: 0;
+   pointer-events: auto;
+   background-color: rgba(10,10,10,.2);
+   @apply relative select-none rounded-full cursor-pointer border-none h-5 w-5 inline-block outline-0;
+}
+
+.close::after{
+   @apply h-1/2 w-0.5;
+}
+
+.close::before{
+   @apply h-0.5 w-1/2;
+}
+
+.close::after, .close::before{
+   content: "";
+   transform: translateX(-50%) translateY(-50%) rotate(45deg);
+   @apply bg-white block left-1/2 top-1/2 absolute origin-center;
+}
+
+button[disabled]{
+   @apply opacity-60 cursor-not-allowed;
+}
+svg.spinner{
+   @apply animate-spin inline mr-3 fill-current;
+}
+
+.card{
+   @apply rounded-md bg-white;
+   border: 1px solid rgba(0,0,0,.125);
+}
+.card .card-header{
+   @apply flex justify-between;
+   border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+.card .card-header .close{ @apply my-auto;}
+
+.card .card-header  button svg{
+   width: 1rem;
+   fill: #4a4a4a;
+   transition: all .6s ease-in-out;
+}
+
+.card :is(.card-header, .card-footer){
+   @apply py-2 px-4;
+   background-color: rgba(0, 0, 0, .03);
+}
+
+.card .card-body{padding: 1rem 1rem;}
+
+
+.card .card-footer{
+   border-top: 1px solid rgba(0, 0, 0, .125);
+}
+
+table {
+   caption-side: bottom;
+   border-collapse: collapse;
+   color:#212529;
+   background-color: transparent;
+   border-color: #dee2e6;
+   border-spacing: 0;
+   width: 100%;
+}
+
+tbody, td, tfoot, th, thead, tr {
+   border-color: #dee2e6;
+   border-style: solid;
+   border-width: 0;
+   border-bottom-width: 1px;
+}
+
+th, td {
+   text-align: center;
+   padding: .25rem .25rem;
+}
+
+tr:nth-child(even) {
+   background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bookAddon {
+   grid-gap: 30px;
+   grid-auto-flow: row dense;
+   @apply grid grid-rows-[auto];
+   grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+}
+
+.bookAddon .card{
+   @apply overflow-hidden h-min w-fit;
+}
+
+.bookAddon .card img{
+   @apply w-full h-auto;
+}

@@ -1,0 +1,46 @@
+nav{
+   @apply sticky justify-between py-0.5 flex px-6 gap-x-2.5 top-0 bg-white z-10;
+}
+nav img{
+   height: 50px;
+   @apply my-auto w-auto align-middle cursor-pointer;
+}
+nav div.search{
+   height: 30px;
+   padding: 1px 10px !important;
+   border-color: #80bdff !important;
+   @apply m-auto flex w-3/4 form-input rounded-full gap-x-2.5;
+}
+
+nav div.search svg{
+   height: 16px;
+   @apply m-auto fill-blue-500 cursor-pointer;
+}
+
+nav input {
+   @apply m-auto w-full !p-0 !border-none;
+}
+
+nav .avatar{
+   @apply rounded-full hidden md:block h-[35px];
+}
+nav input:focus { box-shadow: none !important;}
+
+nav div.menuIcon{
+   @apply cursor-pointer inline-block my-auto md:hidden;
+}
+
+nav div.menuIcon :is(.bar1, .bar2, .bar3) {
+   transition: 0.4s;
+   @apply m-[6px_0] w-7 h-[3px] bg-black;
+}
+
+nav div.change .bar2 { @apply opacity-0; }
+
+nav div.change .bar1 {
+   transform: translate(0, 9px) rotate(-45deg);
+}
+ 
+nav div.change .bar3 {
+   transform: translate(0, -9px) rotate(45deg);
+}

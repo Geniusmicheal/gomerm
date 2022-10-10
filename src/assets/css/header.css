@@ -1,0 +1,15 @@
+header{
+   @apply bg-[#f8f8f8] py-2 px-8 text-[#555]  justify-between hidden md:flex;
+}
+header ul{
+   @apply my-auto flex;
+}
+header ul li{
+   @apply text-sm px-3.5;
+   border-right: 1px solid #ddd;
+}
+header ul li:last-child{
+   @apply flex gap-x-3;
+   border-right: none;
+}
+header ul li svg{ @apply my-auto h-4 fill-current}

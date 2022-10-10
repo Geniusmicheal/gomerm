@@ -1,0 +1,42 @@
+.alert{
+   padding:1rem 0rem .5rem 1rem;
+   color: var(--bs-alert-color);
+   background-color: var(--bs-alert-bg);
+   border: 1px solid var(--bs-alert-border-color);
+   @apply w-full my-4 relative rounded-md leading-5;
+   font-weight:400;
+   font-size:1rem;
+}
+
+.alert-danger{
+   --bs-alert-color: #842029;
+   --bs-alert-bg: #f8d7da;
+   --bs-alert-border-color: #f5c2c7;
+}
+
+.alert-success {
+   --bs-alert-color: #0f5132;
+   --bs-alert-bg: #d1e7dd;
+   --bs-alert-border-color: #badbcc;
+}
+
+.alert-info {
+   --bs-alert-color: #055160;
+   --bs-alert-bg: #cff4fc;
+   --bs-alert-border-color: #b6effb;
+}
+
+.alert-warning {
+   --bs-alert-color: #664d03;
+   --bs-alert-bg: #fff3cd;
+   --bs-alert-border-color: #ffecb5;
+}
+
+.alert-primary {
+   --bs-alert-color: #084298;
+   --bs-alert-bg: #cfe2ff;
+   --bs-alert-border-color: #b6d4fe;
+}
+
+.alert > .close { @apply top-2 right-2 absolute; }
+
