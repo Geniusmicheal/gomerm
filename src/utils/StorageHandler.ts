@@ -8,7 +8,7 @@ export const gomermSingleStorage = (fileElement: HTMLInputElement, require=true)
 
    if(!files?.[0] && !require) return false;
    if (!files?.[0] && require) return `Invalid file upload for ${title}`;
-   const fileObj = files[0];
+   const fileObj:any = files?.[0] ;
    const {name,type } = fileObj
 
    const fileType = accept?.split('/')[0];
@@ -18,7 +18,7 @@ export const gomermSingleStorage = (fileElement: HTMLInputElement, require=true)
    return uploadBytes(storageRef, fileObj , { contentType:type })
 }
 
-export const gomermMultiStorage = (filesElement:Array<HTMLInputElement>) => {
+export const gomermMultiStorage = (filesElement:NodeListOf<Element>) => {
    const filesArray:any = [...filesElement];
    return Promise.all(filesArray.map((file:any)=> gomermSingleStorage(file)))
 }

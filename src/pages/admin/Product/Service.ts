@@ -65,7 +65,7 @@ export const onSubmitLogin =  async ({textAreaValue, setLoader, showAlert, textA
          formDetails['banner'] = downloadURL[0];
          
          for (let i = 1; i < downloadURL.length; i++) {
-            const {type, name } = allFileInput[i].files[0];
+            const {type, name } = (allFileInput[i] as any).files[0];
             const value = (allFileInput[i] as HTMLInputElement).name.replaceAll('message','amount');
             console.log(value);
 

@@ -4,13 +4,13 @@ import { useAppContext } from '@provider/contextApi';
 
 const Alert: React.FC  = () => {
    const { alert } = useAppContext();
-   return (
+   return (<>
       alert && (
-         <div className={`alert alert-${alert.type}`}>
+         <div className={`alert alert-${alert?.type}`}>
             <button type="button" className="close"></button>
-            {alert.msg}
+            {alert?.msg}
          </div>
       )
-    )
+   </>)
 }
 export default Alert;

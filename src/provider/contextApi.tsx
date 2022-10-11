@@ -20,8 +20,8 @@ type authStatetype = {
 
 type AppContextType = {
    authDispatch: any,
-   alert: alertDataType,
    authState:authStatetype,
+   alert: alertDataType | undefined,
    showAlert:(msg:string, type:string) => void
 }
 
