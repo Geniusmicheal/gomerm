@@ -13,3 +13,21 @@ header ul li:last-child{
    border-right: none;
 }
 header ul li svg{ @apply my-auto h-4 fill-current}
+
+nav .flex .relative svg{
+   @apply h-[35px] w-[35px] fill-white bg-[#b2c1d6] rounded-full p-1.5;
+}
+
+nav .flex .relative .pingBounce{
+   display: flex;
+   @apply h-4 w-4 animate-bounce absolute top-0 right-0;
+}
+nav .flex .relative .pingBounce .relative{
+   text-align: center;
+   @apply rounded-full h-4 w-4 bg-sky-500 block leading-[14px] text-[12px] text-white font-extrabold;
+}
+
+/* 
+text-align: center;
+font-weight: bolder;
+display: block; */
