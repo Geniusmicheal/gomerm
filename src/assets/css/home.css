@@ -87,7 +87,7 @@
 }
 
 .newLetter{
-   @apply w-full bg-blue-500 p-1;
+   @apply w-full bg-[#08c] p-1;
 }
 
 .newLetter section::before {
@@ -100,16 +100,36 @@
    width: 202px;
    z-index: 0;
 }
+.newLetter section{
+   gap: 20px;
+   @apply relative items-center justify-between  flex-wrap lg:flex-nowrap;
+}
 
-
-.newLetter section div.flex h3{
+.newLetter section div h3{
    @apply text-[26px] text-white font-normal;
 }
 
-.newLetter section div.flex span{
+.newLetter section div span{
    color: rgba(255,255,255,.8);
    @apply text-lg pl-3.5 ml-3.5 leading-[2.15];
    border-left: 1px solid rgba(255,255,255,.8);
+}
+
+.newLetter section form{
+   @apply w-full lg:w-[475px];
+}
+.newLetter section form input[type='text']{
+   border-radius: 50px 0 0 50px;
+   @apply h-[50px] w-full text-black bg-white p-[0_20px];
+}
+
+.newLetter section form input[type='submit']{
+   border-radius: 0 50px 50px 0;
+   @apply bg-[#069] text-white p-[0_30px] cursor-pointer;
+}
+.newLetter section form input:is([type='text'], [type='submit']){
+   font-size: 15px;
+   border: 2px solid #fff;
 }
 
 @media only screen and (min-width: 940px) {
