@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+   font-weight: 400;
+   font-family: "Lato",sans-serif; 
+   @apply text-[14px] text-[#323131];
+}
+
 .form-group{ 
    @apply flex gap-[1rem_0.625rem] flex-wrap md:flex-nowrap mb-4;
 }
@@ -122,3 +128,44 @@ tr:nth-child(even) {
 .bookAddon .card img{
    @apply w-full h-auto;
 }
+
+.publicFooter{  @apply w-11/12 m-auto;  }
+
+
+.publicFooter ul:first-child {
+   border-bottom: 1px solid #e5e5e5;
+   @apply leading-[50px] flex gap-[1rem_0.625rem] justify-between p-[10px] flex-wrap; 
+}
+
+
+
+.publicFooter h2{ 
+   @apply text-black text-[20px] font-normal md:pb-5;
+}
+
+.publicFooter ul li{
+   @apply leading-[21px] p-[3px_0] text-[#555] ;
+}
+
+
+@media only screen and (max-width: 768px) {
+   .publicFooter > div h2{ 
+      cursor: pointer;
+      border-bottom: 1px solid #e5e5e5;
+   }
+
+   .publicFooter > div ul {
+      max-height: 0;
+      overflow: hidden;
+      padding: 7px;
+      transition: max-height .3s ease-in-out;
+   }
+}
+
+
+/* display: ;
+justify-content: space-between;
+color: ;
+font-size: ;
+
+line-height: 50px; */
