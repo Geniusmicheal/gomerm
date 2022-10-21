@@ -91,7 +91,7 @@ const Footer:React.FC  = () => {
       </section>
       <div className="bg-[#f8f8f8] p-[10px_0]">
          <section className="publicFooter flex justify-center md:justify-between gap-4 flex-wrap ">
-            <p className="text-center">Copyright © 2018 <b className="text-[#08c]">GOMERM</b>. All rights reserved - Develop by Genius Micheal</p>
+            <p className="text-center">Copyright © 2018 <b className="text-[#08c]">GOMERM</b>. All rights reserved - Developed by Genius Micheal</p>
             <img src="https://wpbingosite.com/wordpress/bootin/wp-content/uploads/2018/06/paymet.png" alt="" />
          </section>
       </div>
