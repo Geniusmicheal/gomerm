@@ -4,8 +4,8 @@ import AsideProduct from '@pages/public/AllProduct/Aside';
 
 const AllProduct:React.FC  = () => {
    return  <section className='product'>
-            {/* <AsideProduct/>
-            <main></main> */}
+            <AsideProduct/>
+            <main></main>
           
       </section>
     
