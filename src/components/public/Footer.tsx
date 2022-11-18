@@ -1,18 +1,24 @@
+import '@css/footer.css';
 import React, { SyntheticEvent } from 'react';
+import NewLetter from '@components/public/NewLetter';
+import { useAppContext } from '@provider/contextApi';
 
 const accordion = (event:SyntheticEvent) =>{
    if(window.matchMedia("screen and (min-width: 768.5px)").matches)return;
    const accordionButton = (event.target as HTMLElement).closest('h2') as HTMLElement; 
    const ulElement = accordionButton.nextSibling as HTMLElement;
-   console.log(ulElement)
+
    if(ulElement.hasAttribute('style'))
    ulElement.removeAttribute('style');
    else ulElement.style.maxHeight = `${ulElement.scrollHeight}px`;
 }
-
+// , categories 
 const Footer:React.FC  = () => {
+   const { genres } = useAppContext();
    return(<>
+      <NewLetter/>
       <section className="publicFooter">
+         
          <ul>
             <li>About us</li>
             <li>Customer</li>
@@ -64,15 +70,14 @@ const Footer:React.FC  = () => {
 
             <div>
                <h2 className="flex justify-between" onClick={accordion}>
-                  <span> Categories</span>
+                  <span> Genres</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="md:hidden h-[23px]">
                      <path d="M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z"/>
                   </svg>
                </h2>
-               <ul>
-                  <li>Home Audio & Theater</li>
-                  <li>Home Audio & Theater</li>
-                  <li>Home Audio & Theater</li>
+               <ul>{ genres.map((item:string) =>{
+                     return <li key={item}>{item}</li>
+                  })}
                </ul>
             </div>
             <div>

@@ -129,38 +129,7 @@ tr:nth-child(even) {
    @apply w-full h-auto;
 }
 
-.publicFooter{  @apply w-11/12 m-auto;  }
-
-
-.publicFooter ul:first-child {
-   border-bottom: 1px solid #e5e5e5;
-   @apply leading-[50px] flex gap-[1rem_0.625rem] justify-between p-[10px] flex-wrap; 
-}
-
-
-
-.publicFooter h2{ 
-   @apply text-black text-[20px] font-normal md:pb-5;
-}
-
-.publicFooter ul li{
-   @apply leading-[21px] p-[3px_0] text-[#555] ;
-}
-
-
-@media only screen and (max-width: 768px) {
-   .publicFooter > div h2{ 
-      cursor: pointer;
-      border-bottom: 1px solid #e5e5e5;
-   }
-
-   .publicFooter > div ul {
-      max-height: 0;
-      overflow: hidden;
-      padding: 7px;
-      transition: max-height .3s ease-in-out;
-   }
-}
+.home section, section.product{ @apply  w-11/12 m-[40px_auto] }
 
 
 /* display: ;

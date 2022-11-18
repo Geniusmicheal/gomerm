@@ -20,14 +20,16 @@ export default defineConfig({
 
    resolve: {
       alias: [
+         { find: '@hooks', replacement: path.resolve(__dirname, 'src/hooks') },
          { find: '@utils', replacement: path.resolve(__dirname, 'src/utils') },
          { find: '@pages', replacement: path.resolve(__dirname, 'src/pages') },
          { find: '@helper', replacement: path.resolve(__dirname, 'src/helper') },
          { find: '@css', replacement: path.resolve(__dirname, 'src/assets/css') },
          { find: '@img', replacement: path.resolve(__dirname, 'src/assets/img') },
          { find: '@provider', replacement: path.resolve(__dirname, 'src/provider') },
+         { find: '@resources', replacement: path.resolve(__dirname, 'src/resources') },
          { find: '@components', replacement: path.resolve(__dirname, 'src/components') },
-         { find: '@hooks', replacement: path.resolve(__dirname, 'src/hooks') }
+
       ],
    },
 })

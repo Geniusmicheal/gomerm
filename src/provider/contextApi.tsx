@@ -1,7 +1,9 @@
-import UseAuthStateReducer from "@hooks/shared/UseAuthStateReducer";
+import data from "@resources/data.json";
 import { gomermAuthState } from "@utils/Auth";
 import { UserDataType } from "@utils/dataType";
-import React, { createContext,useEffect,useState, useContext, ReactNode, useReducer, useCallback } from "react";
+import UseAuthStateReducer from "@hooks/shared/UseAuthStateReducer";
+import React, { createContext,useEffect,useState, useContext, ReactNode } from "react";
+
 
 type alertDataType = { msg:string, type:string };
 
@@ -19,7 +21,9 @@ type authStatetype = {
 }
 
 type AppContextType = {
+   genres:string[],
    authDispatch: any,
+   categories:string[],
    authState:authStatetype,
    alert: alertDataType | undefined,
    showAlert:(msg:string, type:string) => void
@@ -27,12 +31,13 @@ type AppContextType = {
 
 
 const AppContext = createContext<AppContextType>({
+   genres:[],
+   categories:[],
    alert: {msg:'', type:''},
    authState: authStateValue,
    showAlert: () => undefined,
    authDispatch: ()=> undefined,
 });
-
 
 export const useAppContext = () => useContext(AppContext)
 
@@ -49,7 +54,7 @@ const AppProvider:React.FC<{ children: ReactNode }> = ({children}) => {
       setTimeout(() => setAlert(undefined), 5000);
    }
 
-   const contextValue = {showAlert, alert, authState, authDispatch};
+   const contextValue = {showAlert, alert, authState, authDispatch, ...data};
 
    return (<AppContext.Provider value={contextValue}> {children}</AppContext.Provider>);
 }

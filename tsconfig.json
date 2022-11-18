@@ -18,14 +18,15 @@
     "baseUrl": "src",
     "types": ["node"],
     "paths": {
+      "@hooks/*":["hooks/*"],
       "@utils/*":["utils/*"],
       "@pages/*":["pages/*"],
       "@helper/*":["helper/*"],
       "@css/*":["assets/css/*"],
       "@img/*":["assets/img/*"],
       "@provider/*":["provider/*"],
+      "@resources/*":["resources/*"],
       "@components/*":["components/*"],
-      "@hooks/*":["hooks/*"],
     }
   },
   "include": ["src"],

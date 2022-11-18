@@ -2,8 +2,8 @@ import React from 'react';
 
 const NewLetter:React.FC  = () => {
    return <div className="newLetter">
-      <section className="flex">
-         <div className="flex" m-auto>
+      <section className="flex m-[40px_auto] w-11/12">
+         <div className="flex m-auto">
             <h3>Subscribe our Newsletter</h3>
             <span>Get <b className="text-white">25 persent Off</b> first purchase!</span>
          </div>
